@@ -1,89 +1,103 @@
-# Adianti Template 8.2
+# 📖 Documentação Framework Adianti 8.2
 
-## Visão Geral
+Bem-vindo à documentação completa do Framework Adianti 8.2. Esta documentação foi criada para fornecer um guia detalhado e prático para desenvolvedores que desejam dominar todas as funcionalidades do framework.
 
-Este projeto é baseado no Adianti Framework, uma plataforma PHP para desenvolvimento rápido de aplicações web, com foco em produtividade, segurança e flexibilidade. O template oferece uma estrutura modular, pronta para autenticação, permissões, logs, notificações, REST, SOAP, e muito mais.
+## 📚 Índice da Documentação
 
-## Estrutura de Pastas
+### 1. 📝 [Formulários](01-formularios/)
+- [Classes Base de Formulários](01-formularios/01-classes-base.md)
+- [Componentes de Entrada](01-formularios/02-componentes-entrada.md)
+- [Validadores](01-formularios/03-validadores.md)
+- [Layout e Organização](01-formularios/04-layout-organizacao.md)
 
-- **app/config/**: Arquivos de configuração da aplicação, bancos, permissões, etc.
-- **app/control/**: Controladores das páginas e componentes da interface.
-- **app/database/**: Scripts SQL e bancos SQLite para comunicação, log e permissões.
-- **app/images/**: Imagens utilizadas na aplicação.
-- **app/lib/**: Bibliotecas auxiliares, utilitários, widgets, validadores, etc.
-- **app/model/**: Modelos de dados (ORM), como usuários, grupos, permissões, unidades, etc.
-- **app/output/**: Saída de arquivos gerados pela aplicação.
-- **app/reports/**: Relatórios customizados.
-- **app/resources/**: Arquivos HTML, CSS e recursos visuais.
-- **app/service/**: Serviços REST, CLI, autenticação, jobs, etc.
-- **app/templates/**: Templates visuais (ex: adminbs5).
-- **app/view/**: Views customizadas.
+### 2. 📊 [DataGrids](02-datagrids/)
+- [Classes Base de DataGrid](02-datagrids/01-classes-base.md)
+- [Colunas e Transformações](02-datagrids/02-colunas-transformacoes.md)
+- [Ações](02-datagrids/03-acoes.md)
+- [Filtros e Busca](02-datagrids/04-filtros-busca.md)
+- [Paginação e Performance](02-datagrids/05-paginacao-performance.md)
+- [Exportação](02-datagrids/06-exportacao.md)
 
-## Principais Funcionalidades
+### 3. 🗄️ [Models e TRecord](03-models/)
+- [Classe Base TRecord](03-models/01-trecord-base.md)
+- [Conexão com Banco](03-models/02-conexao-banco.md)
+- [Operações CRUD](03-models/03-operacoes-crud.md)
+- [Relacionamentos](03-models/04-relacionamentos.md)
 
-- **Autenticação e Permissões**: Controle de acesso por usuários, grupos, papéis e unidades.
-- **Notificações e Mensagens**: Sistema interno para comunicação entre usuários.
-- **Logs**: Registro de operações, alterações e comandos SQL.
-- **REST e SOAP**: Serviços prontos para integração externa.
-- **Interface Modular**: Separação clara entre controle, modelo e visualização.
-- **Multi-idioma**: Suporte a português, inglês e espanhol.
-- **Temas**: Personalização visual via templates.
+### 4. 🔍 [Criterias e Filters](04-criterias-filters/)
+- [TCriteria](04-criterias-filters/01-tcriteria.md)
+- [TFilter](04-criterias-filters/02-tfilter.md)
+- [Ordenação e Agrupamento](04-criterias-filters/03-ordenacao-agrupamento.md)
+- [Consultas Avançadas](04-criterias-filters/04-consultas-avancadas.md)
 
-## Configuração
+### 5. 🌐 [APIs](05-apis/)
+- [APIs REST](05-apis/01-apis-rest.md)
+- [Serviços Internos](05-apis/02-servicos-internos.md)
+- [Documentação de API](05-apis/03-documentacao-api.md)
 
-- Os arquivos de configuração estão em `app/config/`. Exemplos:
-	- `application.php`: Configurações gerais (idioma, tema, título, etc).
-	- `permission.php`, `communication.php`, `log.php`: Configuração dos bancos SQLite.
-- O banco padrão é SQLite, mas pode ser adaptado para outros via configuração.
+### 6. 🎨 [THtmlRenderer](06-html-renderer/)
+- [Funcionalidades Básicas](06-html-renderer/01-funcionalidades-basicas.md)
+- [Seções e Condições](06-html-renderer/02-secoes-condicoes.md)
+- [Integração com Framework](06-html-renderer/03-integracao-framework.md)
 
-## Modelos de Dados
+### 7. 🔧 [Componentes Customizados](07-componentes-customizados/)
+- [Componentes de Formulário](07-componentes-customizados/01-componentes-formulario.md)
+- [Componentes de Grid](07-componentes-customizados/02-componentes-grid.md)
+- [Distribuição e Reutilização](07-componentes-customizados/03-distribuicao-reutilizacao.md)
 
-- **Usuários**: `SystemUser` (app/model/admin/SystemUser.php)
-- **Grupos**: `SystemGroup`
-- **Papéis**: `SystemRole`
-- **Unidades**: `SystemUnit`
-- **Programas**: `SystemProgram`
-- **Permissões**: `SystemPermission`
-- **Preferências**: `SystemPreference`
+### 8. 🎯 [Traits](08-traits/)
+- [Traits Disponíveis](08-traits/01-traits-disponiveis.md)
+- [Criação de Traits](08-traits/02-criacao-traits.md)
+- [Integração com Classes](08-traits/03-integracao-classes.md)
 
-## Dependências
+## 🎯 Como Usar Esta Documentação
 
-As principais dependências estão no `composer.json`:
-- phpmailer/phpmailer
-- dompdf/dompdf
-- firebase/php-jwt
-- bacon/bacon-qr-code
-- adianti/plugins, adianti/pdfdesigner, etc.
+### Para Iniciantes
+1. Comece com [Formulários - Classes Base](01-formularios/01-classes-base.md)
+2. Prossiga para [Models - TRecord Base](03-models/01-trecord-base.md)
+3. Estude [DataGrids - Classes Base](02-datagrids/01-classes-base.md)
 
-Instale com:
-```sh
-composer install
+### Para Desenvolvedores Intermediários
+- Explore os componentes específicos de cada seção
+- Foque nos exemplos práticos e casos de uso
+- Estude as seções de Performance e Otimização
+
+### Para Desenvolvedores Avançados
+- Concentre-se em [Componentes Customizados](07-componentes-customizados/)
+- Estude [Traits](08-traits/) para reutilização de código
+- Explore [APIs](05-apis/) para integração
+
+## 🔧 Convenções Utilizadas
+
+### Códigos de Exemplo
+Todos os exemplos são funcionais e testados. Você pode copiar e colar diretamente em seus projetos.
+
+### Estrutura dos Arquivos
+```php
+<?php
+// Sempre incluímos o cabeçalho completo
+class ExemploClasse extends TPage
+{
+    // Código comentado e explicado
+}
 ```
 
-## Como Executar
+### Símbolos Utilizados
+- 🟢 **Recomendado**: Melhores práticas
+- 🟡 **Atenção**: Pontos importantes
+- 🔴 **Cuidado**: Possíveis problemas
+- 💡 **Dica**: Informações úteis
+- ⚡ **Performance**: Otimizações
 
-1. Configure o ambiente PHP (>=7.4) e um servidor web (ex: Apache, Laragon).
-2. Ajuste as configurações em `app/config/application.php` conforme necessário.
-3. Acesse `index.php` pelo navegador.
-4. O login padrão pode ser configurado no banco `app/database/permission.db`.
+## 📋 Status da Documentação
 
-## Segurança
+Acompanhe o progresso da documentação no arquivo [CHECKLIST_DOCUMENTACAO.md](../CHECKLIST_DOCUMENTACAO.md).
 
-- Permissões são controladas por classes e métodos públicos definidos em `application.php`.
-- Autenticação via login/senha, com opção de renovação de senha e validação forte.
+## 🤝 Contribuindo
 
-## Personalização
+Esta documentação está em constante evolução. Sugestões e melhorias são sempre bem-vindas!
 
-- Modifique templates em `app/templates/adminbs5/`.
-- Adicione novos controladores em `app/control/`.
-- Crie novos modelos em `app/model/`.
+---
 
-## Recursos Adicionais
-
-- **REST**: Endpoints em `rest/`.
-- **SOAP**: Endpoints em `soap.php.dist`.
-- **CLI**: Scripts em `service/cli/`.
-
-## Licença
-
-Adianti Framework é distribuído sob licença própria. Veja o arquivo LICENSE.
+*Framework Adianti 8.2 - Documentação Completa*  
+*Última atualização: 4 de setembro de 2025*
