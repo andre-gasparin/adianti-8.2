@@ -1,103 +1,56 @@
-# 📖 Documentação Framework Adianti 8.2
+# � Adianti FW 8.2 — Visão geral e mapeamento da documentação
 
-Bem-vindo à documentação completa do Framework Adianti 8.2. Esta documentação foi criada para fornecer um guia detalhado e prático para desenvolvedores que desejam dominar todas as funcionalidades do framework.
+Adianti é um framework PHP orientado a componentes para construir aplicações web rapidamente: páginas (TPage), formulários (TForm), componentes de entrada, models com TRecord, grids, critérios de busca, renderizadores de template e ferramentas para criar APIs. Esta documentação organiza conceitos, guias e exemplos em pastas para facilitar a navegação e a contribuição.
 
-## 📚 Índice da Documentação
+## � Mapeamento da documentação para pastas
+Aqui está o mapeamento dos tópicos principais para as pastas do repositório. Use os links para navegar diretamente aos tópicos.
 
-### 1. 📝 [Formulários](01-formularios/)
-- [Classes Base de Formulários](01-formularios/01-classes-base.md)
-- [Componentes de Entrada](01-formularios/02-componentes-entrada.md)
-- [Validadores](01-formularios/03-validadores.md)
-- [Layout e Organização](01-formularios/04-layout-organizacao.md)
+- `01-formularios/` — Formulários e componentes de entrada
+    - Exemplos e componentes: `tentry.md`, `tcombo.md`, `tdate.md`, `tdatetime.md`, `tform.md`, `tfile.md`, `tpassword.md`, `tselect.md`, `tnotebook.md`, `ttext.md`, etc.
+    - Validadores: pasta `01-formularios/validators/` (ex.: `temailvalidator.md`, `tcpfvalidator.md`, `tcnpjvalidator.md`)
+    - Guias de wrapper e casos de uso: `BootstrapFormWrapper.md`, `BootstrapFormBuilder.md`, `tmodalform.md`
 
-### 2. 📊 [DataGrids](02-datagrids/)
-- [Classes Base de DataGrid](02-datagrids/01-classes-base.md)
-- [Colunas e Transformações](02-datagrids/02-colunas-transformacoes.md)
-- [Ações](02-datagrids/03-acoes.md)
-- [Filtros e Busca](02-datagrids/04-filtros-busca.md)
-- [Paginação e Performance](02-datagrids/05-paginacao-performance.md)
-- [Exportação](02-datagrids/06-exportacao.md)
+- `02-datagrids/` — DataGrids, colunas, ações e exportação
+    - Conceitos e classes base: `TDataGrid.md`, `BootstrapDatagridWrapper.md`, `TQuickGrid.md`
+    - Colunas, transformações e ações: `TDataGridColumn.md`, `TransformacoesDeColuna.md`, `TDataGridAction.md`, `TDataGridActionGroup.md`
+    - Busca, filtros e paginação: `CriteriosDeBusca.md`, `FiltrosDeColuna.md`, `PaginacaoEPerformance.md`
+    - Exportação: `ExportacaoDeDados.md`
 
-### 3. 🗄️ [Models e TRecord](03-models/)
-- [Classe Base TRecord](03-models/01-trecord-base.md)
-- [Conexão com Banco](03-models/02-conexao-banco.md)
-- [Operações CRUD](03-models/03-operacoes-crud.md)
-- [Relacionamentos](03-models/04-relacionamentos.md)
+- `03-models/` — Models, TRecord e operação com banco
+    - TRecord e mapeamento: `TRecord.md`, `TDatabase.md`, `TConnection.md` (guia e exemplos em `Operacoes-CRUD.md` e `Relacionamentos.md`)
 
-### 4. 🔍 [Criterias e Filters](04-criterias-filters/)
-- [TCriteria](04-criterias-filters/01-tcriteria.md)
-- [TFilter](04-criterias-filters/02-tfilter.md)
-- [Ordenação e Agrupamento](04-criterias-filters/03-ordenacao-agrupamento.md)
-- [Consultas Avançadas](04-criterias-filters/04-consultas-avancadas.md)
+- `04-criterias-filters/` (e `04-criterias-filters/` alternativas) — Filtros e consultas
+    - `TCriteria.md`, `TFilter.md`, `OrdenacaoAgrupamento.md`, exemplos avançados em `Exemplos-Avancados.md`
 
-### 5. 🌐 [APIs](05-apis/)
-- [APIs REST](05-apis/01-apis-rest.md)
-- [Serviços Internos](05-apis/02-servicos-internos.md)
-- [Documentação de API](05-apis/03-documentacao-api.md)
+- `05-apis/` — APIs REST e integração
+    - `Documentacao-API.md`, `Integracao-Frontend.md`, `REST.md`, `Servicos-Internos.md`
 
-### 6. 🎨 [THtmlRenderer](06-html-renderer/)
-- [Funcionalidades Básicas](06-html-renderer/01-funcionalidades-basicas.md)
-- [Seções e Condições](06-html-renderer/02-secoes-condicoes.md)
-- [Integração com Framework](06-html-renderer/03-integracao-framework.md)
+- `06-thtmlrenderer/` — THtmlRenderer e templates
+    - Carregamento de templates, seções condicionais e integração: `Carregamento-Templates.md`, `Secoes-e-Conditicoes.md`
 
-### 7. 🔧 [Componentes Customizados](07-componentes-customizados/)
-- [Componentes de Formulário](07-componentes-customizados/01-componentes-formulario.md)
-- [Componentes de Grid](07-componentes-customizados/02-componentes-grid.md)
-- [Distribuição e Reutilização](07-componentes-customizados/03-distribuicao-reutilizacao.md)
+- `07-componentes/` — Componentes customizados e distribuição
+    - Guias para componentes de formulário e grid, exemplos de reutilização em `Componentes-Formulario.md` e `Componentes-Grid.md`
 
-### 8. 🎯 [Traits](08-traits/)
-- [Traits Disponíveis](08-traits/01-traits-disponiveis.md)
-- [Criação de Traits](08-traits/02-criacao-traits.md)
-- [Integração com Classes](08-traits/03-integracao-classes.md)
+- `08-traits/` — Traits úteis do framework
+    - Traits para integração com banco, arquivos e formulários: `AdiantiDatabaseWidgetTrait.md`, `AdiantiMasterDetailTrait.md`, `AdiantiFileSaveTrait.md` e outros.
 
-## 🎯 Como Usar Esta Documentação
+## 🔎 Como navegar nesta documentação
+- Abra `01-formularios/`, `02-datagrids/`, `03-models/` etc. para ver guias e exemplos por área.
+- Procure na pasta `01-formularios/validators/` para ver validadores prontos e exemplos em `examples/`.
+- Use os arquivos `README.md` ou `appendPage.md` dentro das pastas quando existir para orientações locais.
 
-### Para Iniciantes
-1. Comece com [Formulários - Classes Base](01-formularios/01-classes-base.md)
-2. Prossiga para [Models - TRecord Base](03-models/01-trecord-base.md)
-3. Estude [DataGrids - Classes Base](02-datagrids/01-classes-base.md)
+## �️ Como contribuir
+- Edite o arquivo relevante na pasta correspondente e abra um pull request com a mudança proposta.
+- Preferência por exemplos funcionais e pequenos snippets testáveis.
 
-### Para Desenvolvedores Intermediários
-- Explore os componentes específicos de cada seção
-- Foque nos exemplos práticos e casos de uso
-- Estude as seções de Performance e Otimização
-
-### Para Desenvolvedores Avançados
-- Concentre-se em [Componentes Customizados](07-componentes-customizados/)
-- Estude [Traits](08-traits/) para reutilização de código
-- Explore [APIs](05-apis/) para integração
-
-## 🔧 Convenções Utilizadas
-
-### Códigos de Exemplo
-Todos os exemplos são funcionais e testados. Você pode copiar e colar diretamente em seus projetos.
-
-### Estrutura dos Arquivos
-```php
-<?php
-// Sempre incluímos o cabeçalho completo
-class ExemploClasse extends TPage
-{
-    // Código comentado e explicado
-}
-```
-
-### Símbolos Utilizados
-- 🟢 **Recomendado**: Melhores práticas
-- 🟡 **Atenção**: Pontos importantes
-- 🔴 **Cuidado**: Possíveis problemas
-- 💡 **Dica**: Informações úteis
-- ⚡ **Performance**: Otimizações
-
-## 📋 Status da Documentação
-
-Acompanhe o progresso da documentação no arquivo [CHECKLIST_DOCUMENTACAO.md](../CHECKLIST_DOCUMENTACAO.md).
-
-## 🤝 Contribuindo
-
-Esta documentação está em constante evolução. Sugestões e melhorias são sempre bem-vindas!
+## ✅ Checklist rápido (navegação)
+- Formulários: veja `01-formularios/` — Done
+- DataGrids: veja `02-datagrids/` — Done
+- Models/TRecord: veja `03-models/` — Done
+- Criterias/Filters: veja `04-criterias-filters/` — Done
+- APIs: veja `05-apis/` — Done
 
 ---
 
-*Framework Adianti 8.2 - Documentação Completa*  
-*Última atualização: 4 de setembro de 2025*
+*Framework Adianti 8.2 - Documentação mapeada e organizada*  
+*Última atualização: 5 de setembro de 2025*
